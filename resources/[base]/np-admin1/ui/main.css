@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+p {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 0;
+}
+
+.container-modmenu {
+    position: absolute;
+    width: 22.7%;
+    height: 83%;
+    background: #2c3f61;
+    right: 2%;
+    top: 9%;
+    display: none;
+}
+
+.actions-scroll {
+  position: relative;
+  top : 1%;
+  height: 96%; 
+  width: 90%; 
+  padding: unset; 
+  overflow-y: scroll;
+}
+
+.left-nav {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background: #23314d;
+    border: 0;
+    width: 10.05%;
+    height: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 3;
+}
+
+.top-nav {
+  position: relative;
+  left: 10%;
+  top: 0%;
+  background: #39444f;
+  border: 0;
+  width: 90%;
+  height: 5.5%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 3;
+}
+
+.topbtnactive {
+  background-color: #28416d;
+}
+
+.topbtncode {
+  background: #39444f;
+  border: none;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: -2px;
+  margin-right: -2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  line-height: 0%;
+}
+
+.btncode {
+  background: #808080;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-left: 14%;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 10%;
+  position: relative;
+  line-height: 0%;
+  border-radius: 2px;
+}
+
+  /*.btnsequence {
+    background: #808080;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+    width: 70%;
+    margin-left: 14%;
+    margin-top: 100%;
+    height: 5%;
+    position: absolute;
+    line-height: 0%;
+    border-radius: 2px;
+  }*/
+
+  .btninject {
+    background: #808080;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 325%;
+    height: 8.5%;
+    position: absolute;
+    line-height: 0%;
+    border-radius: 5px;
+  }
+
+  .btnshield {
+    background: #808080;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 220%;
+    height: 8.5%;
+    position: absolute;
+    line-height: 0%;
+    border-radius: 5px;
+  }
+
+  .btnactive {
+    background-color: #292929;
+  }
+
+  .btnannounce {
+    position: absolute;
+    background: rgb(39, 155, 24);
+    font-weight:  600;
+    width: 48.5%;
+    border: 0;
+    color: rgb(0, 0, 0);
+    left: 1%;
+    bottom: 2%;
+    height: 12%;
+    border-radius: 5px;
+    line-height: 0;
+    
+  }
+
+  .btnannounce:hover {
+    background: rgb(45, 192, 26);
+  }
+
+  .btnmenu {
+    position: relative;
+    border: 1px solid #00000000;
+    border-radius: 2px;
+    width: 97.92%;
+    padding: unset; 
+    display:inline-block; 
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    height: 4%;
+    line-height: 0;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  .btnmenu:hover {
+    color: black;
+    /* border: 1px solid white; */
+  }
+
+  .btnclearannounce {
+    position: absolute;
+    background: rgb(243, 30, 30);
+    font-weight:  600;
+    width: 48.5%;
+    border: 0;
+    color: rgb(0, 0, 0);
+    right: 1%;
+    bottom: 2%;
+    height: 12%;
+    border-radius: 5px;
+    line-height: 0;
+  }
+
+  .btnclearannounce:hover {
+    background: rgb(192, 26, 26);
+  }
+
+  .announcetitle {
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    top: -3%;
+  }
+
+  .playerlisttitle {
+    position: absolute;
+    color: white;
+    width: 90%;
+    text-align: center;
+    top: -2%;
+    left: 5%;
+    line-height: 150%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+
+  .btninjectiontrojan {
+    position: absolute;
+    background: rgb(209, 42, 42);
+    font-weight: 600;
+    width: 36%;
+    border: 0;
+    color: rgb(255, 255, 255);
+    left: 32%;
+    top: 40%;
+    height: 12%;
+    box-shadow: 2px 2px 6px rgb(20,20,20);
+  }
+
+  .btninjectiontrojan:hover {
+    background: rgb(173, 0, 0);
+    box-shadow: 2px 2px 6px rgb(20,20,20);
+  }
+
+  .stage-utility {
+    position: relative;
+    left: 6%;
+    top: 0%;
+    background-image: #2c3f61;
+    width: 94%;
+    height: 100%;
+    background-size: 100%;
+    display: none;
+  }
+
+  .stage-user {
+    position: relative;
+    left: 6%;
+    top: 0%;
+    background-image: #2c3f61;
+    width: 94%;
+    height: 100%;
+    background-size: 100%;
+    display: none;
+  }
+
+  .stage-players {
+    position: relative;
+    left: 6%;
+    top: 0%;
+    background-image: #2c3f61;
+    width: 94%;
+    height: 95%;
+    background-size: 100%;
+    overflow-y: scroll;
+  }
+
+  .stage-two {
+    position: relative;
+    left: 6%;
+    top: 0%;
+    background-image: #2c3f61;
+    width: 94%;
+    height: 100%;
+    background-size: 100%;
+    display: none;
+  }
+
+  .stage-admin {
+    position: relative;
+    left: 6%;
+    top: 0%;
+    background-image: #2c3f61;
+    width: 94%;
+    height: 100%;
+    background-size: 100%;
+    display: none;
+  }
+
+  .stage-success {
+    position: absolute;
+    left: 11%;
+    top: 5%;
+    background:rgba(0, 0, 0, 0.8);
+    width: 86%;
+    height: 90%;
+    display: none;
+  }
+
+  .stage-failure {
+    position: absolute;
+    left: 11%;
+    top: 5%;
+    background:rgba(0, 0, 0, 0.8);
+    width: 86%;
+    height: 90%;
+    display: none;
+  }
+
+.passwordinput {
+      width: 30%;
+      margin-left: 37%;
+      height: 8%;
+      bottom: 39%;
+      background: rgb(17, 17, 17);
+      border: 0;
+      position: absolute;
+      color: rgb(64, 255, 47);
+      font-size: 1.4rem;
+      padding: 10px 10px 10px 10px;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+}
+
+  .passwordinput:focus {
+    outline: none;
+    background: rgb(3, 27, 6);
+}
+
+.hackinginput {
+    width: 60%;
+    margin-left: 20%;
+    height: 8%;
+    bottom: 4%;
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.658);
+    position: absolute;
+    color: rgb(64, 255, 47);
+    font-size: 1.2rem;
+    padding: 10px 10px 10px 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hackinginput:focus {
+    outline: none;
+    background: rgb(32, 32, 32);
+}
+
+
+.inputtext {
+    width: 96%;
+    margin-left: 2%;
+    height: 70%;
+    top: 13%;
+    background: rgb(17, 17, 17);
+    border: 0;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    padding: 10 10 10 10;
+    border-radius: 5px;
+
+}
+
+.inputtextshort {
+  width: 80%;
+  margin-left: 2%;
+  height: 6%;
+  top: 13%;
+  background: rgb(17, 17, 17);
+  border: 0;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  padding: 10 10 10 10;
+  border-radius: 5px;
+
+}
+
+.inputtextshort:focus {
+  outline: none;
+  background: rgb(27, 27, 27);
+}
+
+.inputtext:focus {
+  outline: none;
+  background: rgb(27, 27, 27);
+}
+
+  .terminalicon {
+    position: absolute;
+    width: 5%;
+    height: 8%;
+    margin-left: 31.5%;
+    bottom: 39%;
+    background: rgb(17, 17, 17);
+    border: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.4rem !important;
+    border-right: 2px solid rgb(64, 255, 47);
+  }
+
+  .fa-lock {
+      margin-top: 20%;
+  }
+
+  .fa-user {
+    margin-top: 20%;
+  }
+
+  .fleecalogo {
+      position: absolute;
+      width: 100%;
+      right: 0%;
+      bottom: 0%;
+  }
+
+  .consolewindow {
+      position: absolute;
+      width: 90%;
+      height: 70%;
+      left: 5%;
+      top: 12%;
+      background: black;
+      border: 2px solid rgba(255, 255, 255, 0.658);
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  .word {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: rgb(0, 255, 0);
+    display: inline-block;
+    margin-top: 10px;
+    width: 18%;
+    height: 17%;
+    background: rgb(24, 24, 24);
+    border: 2px solid rgb(46, 46, 46);
+    padding: 30px 35px 20px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 320%;
+  }
+
+  .hackingtitle {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 0.9rem;
+      position: absolute;
+      width: 70%;
+      color: white;
+      left: 5%;
+      height: 6%;
+      padding: 8px;
+      margin-top: 1%;
+      line-height: 200%;
+      letter-spacing: 1px;
+  }
+
+  .hackingwords {
+      font-family: 'Varela Round', sans-serif;
+      position: absolute;
+      background: black;
+      width: 18%;
+      color: white;
+      padding: 8px;
+      left: 78%;
+      top: -1.5%;
+      text-align: center;
+      letter-spacing: 4px;
+      border: 2px solid rgba(255, 255, 255, 0.658);
+  }
+
+  #myProgress {
+    position: absolute;
+    bottom: -3%;
+    left: -1px;
+    width: 100%;
+    background-color: rgb(0, 36, 0);
+    border: 1px solid rgb(100,100,100);
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 5px;
+    background-color: rgb(8, 196, 8);
+  }
+
+.serverannouncement {
+  position: absolute;
+  background: rgba(77, 77, 77, 0.6);
+  left: 75%;
+  top: 2%;
+  width: 24%;
+  height: 30%;
+}
+
+.playerlist {
+  position: relative;
+  left: 5%;
+  top: 1%;
+  width: 96%;
+  height: 91%;
+  background: rgba(77, 77, 77, 0.6);
+  border: 2px solid rgb(100,100,100);
+  padding: 1%;
+}
+
+
+
+
+ [data-md-tooltip]:before {
+   text-align: left;
+    content: attr(data-md-tooltip);
+    position: absolute;
+    left: 100%;
+    padding: 6px;
+    margin-top: 0%;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgb(192, 192, 192));
+    color: rgb(0, 0, 0);
+    border-radius: 2px;
+    font-size: 10px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+    width: max-content; 
+    height: 15%;
+    line-height: 100%;
+
+
+ }
+ [data-md-tooltip]:hover:before {
+  transform: translateX(50%) scale(1.5);
+  display: block;
+ }
+
+
+ /* CHECKBOXES */
+
+ .general-left-checkboxes {
+   position: absolute;
+   left: 1%;
+   top: 2%;
+   width: 35%;
+   height: 92%;
+   background: rgba(77, 77, 77, 0.6);
+   border: 2px solid rgb(100,100,100);
+   padding: 1%;
+ }
+
+.general-right-checkboxes {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  width: 100%;
+  height: 96.5%;
+  /*background: rgba(77, 77, 77, 0.6);
+  border: 2px solid rgb(100,100,100);*/
+  padding: 1%;
+}
+
+ .container {
+  margin-top: 4%;
+  display: block;
+  position: relative;
+  padding-left: 10%;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(200, 200, 200, 0.5);
+  
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.solo-input {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0,0,0,0.7); */
+  display: none;
+}
+
+.userinput {
+  position: absolute;
+  width: 40%;
+  height: 3%;
+  background: rgb(175, 175, 175);
+  left: 30%;
+  top: 38%;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #00f8b9;
+  color: black;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.spawncarinput{
+}
+
+.spawniteminput{
+  display: none;
+}
+
+.player-scroll {
+  position: relative;
+  top: 0.5%;
+  height: 98%; 
+  width: 96.5%; 
+  padding: unset; 
+  overflow-y: scroll;
+  color: black;
+}
+
+.playerscontainer{
+  position: absolute;
+  left: 4.5%;
+  height: 93%;
+  width: 96.5%;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: -5px;
+  top: -.3%;
+}
+
+#individualplayer {
+  margin-top: 1%;
+  padding: 0.25%;
+  background: rgb(255, 255, 255, 0.5);
+  width: 91%;
+  border: none;
+  line-height: 0%;
+  padding-left: 5%;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  margin: 3px;
+}
+
+#individualplayer:hover {
+  border: 1px solid rgb(255, 255, 255, 0.8);
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
+  width: 0%;
+}
+
+
+
+
+.extendmenu {
+  background: #808080;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  position: relative;
+  border-radius: 2px;
+  left: -47%;
+}
+
+
+
+
+
+
+
+.container2 {
+  position: relative;
+}
+
+
+.checkmark2 {
+  background: #808080;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-left: 14%;
+  padding-left: 3px;
+  padding-right: 3px;
+  position: relative;
+  border-radius: 2px;
+}
+
+/* Hide the browser's default checkbox */
+.container2 input {
+  position: relative;
+  opacity: 0;
+  background: black;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked ~ .checkmark2 {
+  background: #3c729d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark2:after {
+  position: relative;
+  display: none;
+  background: #3c729d;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked ~ .checkmark2:after {
+  background: #3c729d;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark:after {
+  background: #3c729d;
+}
+
+.container3 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+select {
+	position: relative;
+	width: 92%;
+  height: 30%;
+  left: 1.7px;
+	color: black;
+  border: none;
+  border-radius: 2px;
+	outline: none;
+	font-size: 0.9rem;
+	padding-bottom: 0.3vh;
+  display: flex;
+}
+
+select:hover {
+	color: black;
+	outline: none;
+	font-size: 0.9rem;
+	padding-bottom: 0.3vh;
+}
+
+select option {
+	border: none;
+	outline: none;
+  border-radius: 2px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: black;
+  cursor: pointer;
+  width: 90%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.active, .collapsible:hover {
+}
+
+.submitbtn{
+  border-radius: 2px;
+  border: none;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  padding: 10px;
+}
+
+.submitbtn:hover{
+  border-radius: 2px;
+  /* border: 1px solid black; */
+}
+
+.content {
+  height: 300px;
+  display: none;
+  overflow: hidden;
+  background-color: #596e80;
+  position: relative;
+  left: .6%;
+  width: 91.85%;
+  border-radius: 2px;
+}
+
+.itemcont {
+  height: 300px;
+  display: none;
+  overflow: hidden;
+  background-color: #596e80;
+  position: relative;
+  left: .6%;
+  width: 91.85%;
+  border-radius: 2px;
+}
+
+.vehcont {
+  height: 300px;
+  display: none;
+  overflow: hidden;
+  background-color: #596e80;
+  position: relative;
+  left: .6%;
+  width: 91.85%;
+  border-radius: 2px;
+}
+
+.garagecont {
+  height: 300px;
+  display: none;
+  overflow: hidden;
+  background-color: #596e80;
+  position: relative;
+  left: .6%;
+  width: 91.85%;
+  border-radius: 2px;
+}
+
+.modelcont {
+  height: 300px;
+  display: none;
+  overflow: hidden;
+  background-color: #596e80;
+  position: relative;
+  left: .6%;
+  width: 91.85%;
+  border-radius: 2px;
+}
+
+.spawnmoneycont {
+  height: 300px;
+  display: none;
+  overflow: hidden;
+  background-color: #596e80;
+  position: relative;
+  left: .6%;
+  width: 91.85%;
+  border-radius: 2px;
+}

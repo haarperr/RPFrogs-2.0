@@ -1,0 +1,337 @@
+
+<title>NP Admin Menu</title>
+<html style="overflow-y: hidden;">
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="script.js"></script>
+    <script type="text/javascript" src="nui://game/ui/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/485844d313.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container-modmenu">
+        <div class="solo-input">
+
+            <form name="answerbox" target="#here" method="post" class="spawncarinput">
+                <input type="text" id="spawncar" class="userinput" style="margin-top: 18%; left: 55px;" placeholder="Vehicle Name">
+                <button class="submitbtn" style="margin-bottom: 92%; left: 55px;" onclick="spawncarnow()">Spawn Vehicle</button>
+                <button class="submitbtn" style="margin-bottom: 92%; left: 165px;" onclick="BackVeh()">Back</button>
+            </form>
+
+            <form name="answerbox" target="#here" method="post" class="garagestateinput">
+                <input type="text" id="licenseplate" class="userinput" style="margin-top: 75%; left: 55px;" placeholder="License Plate">
+                <button class="submitbtn" style="margin-bottom: 35%; left: 55px;" onclick="setgaragestate()">Confirm</button>
+                <button class="submitbtn" style="margin-bottom: 35%; left: 125px;" onclick="BackFromGarState()">Back</button>
+            </form>
+
+            <form name="answerbox" target="#here" method="post" class="spawniteminput">
+                <input type="text" id="spawnitem" class="userinput" style="margin-top: 25%; left: 55px;" placeholder="Item Name">
+            </form>
+            <form name="answerbox" target="#here" method="post" class="spawniteminput">
+                <input type="text submit" id="spawnitemamount" class="userinput" style="margin-top: 32%; left: 55px;" placeholder="Item Amount">
+                <button class="submitbtn" style="margin-bottom: 77%; left: 55px;" onclick="spawnitemnow()">Spawn Item</button>
+                <button class="submitbtn" style="margin-bottom: 77%; left: 148px;" onclick="BackItem()">Back</button>
+            </form>
+
+            <form name="answerbox" target="#here" method="post" class="modelchange">
+                <input type="text" id="model" class="userinput" style="margin-top: 53%; left: 55px;" placeholder="Model Name">
+                <button class="submitbtn" style="margin-bottom: 58%; left: 55px;" onclick="setPlayerModel()">Change Model</button>
+                <button class="submitbtn" style="margin-bottom: 58%; left: 165px;" onclick="BackFromModel()">Back</button>
+            </form>
+
+            <form name="answerbox" target="#here" method="post" class="spawnmoneyamt">
+                <input type="text submit" id="spawnmoneyamount" class="userinput" style="margin-top: 68%; left: 55px;" placeholder="Amount">
+                <button class="submitbtn" style="margin-bottom: 40%; left: 55px;" onclick="spawnmoneyconfirm()">Spawn</button>
+                <button class="submitbtn" style="margin-bottom: 40%; left: 122px;" onclick="BackSpawnMoney()">Back</button>
+            </form>
+        </div>
+
+        <div class="top-nav">
+            
+            <button class="topbtncode btnactive" onclick="playersstage()" id="stageplayerbutton" style="width: 17%;"><p style="font-size: 0.9rem;">Actions</p></button>
+            <button class="topbtncode" onclick="stageone()" id="stage1button" style="width: 17%;"><p style="font-size: 0.9rem;">Player</p></button>
+            <button class="topbtncode" onclick="stagetwo()" id="stage2button" style="width: 17%;"><p style="font-size: 0.9rem;">Utility</p></button>
+            <button class="topbtncode" onclick="userstage()" id="stageuserbutton" style="width: 17%;"><p style="font-size: 0.9rem;">User</p></button>
+        </div>
+
+        <div class="left-nav">
+            <!-- <label class="extendmenu">
+                <span class="extend-menu" onclick="extendmenu()"><i style="font-size: 20px;" class="fa-solid fa-angle-left"></i></span>
+                <span class="shorten-menu" onclick="shortenmenu()" style="display: none;"><i style="font-size: 20px;" class="fa-solid fa-angle-right"></i></span>
+            </label> -->    
+
+            <div style="position: relative; margin-top:43.5em;">
+                <label class="container2" onclick="devmodecheckbox()">
+                    <input type="checkbox" id="devmodecheckbox">
+                    <span class="checkmark2"><i style="font-size: 25px;" class="fa-solid fa-terminal"></i></span>
+                </label>
+
+                <label class="container2" onclick="debugmodecheckbox()">
+                    <input type="checkbox" style="margin-top: -28%;" id="debugmodecheckbox">
+                    <span class="checkmark2"><i style="font-size: 25px; padding: 2px;" class="fa-solid fa-bug"></i></span>
+                </label>
+                <label class="container2" onclick="godmodecheckbox()">
+                    <input type="checkbox" style="margin-top: -29%;" id="godmodecheckbox">
+                    <span class="checkmark2"><i style="font-size: 25px; padding: 3.5px;" class="fa-solid fa-book-bible"></i></span>
+                </label>
+                <label class="container2" onclick="invisiblecheckbox()">
+                    <input type="checkbox" style="margin-top: -32%;" id="invisiblecheckbox">
+                    <span class="checkmark2"><i style="font-size: 25px; padding: 5px;" class="fa-solid fa-ghost"></i></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="stage-players">
+
+
+            <section>
+                <div class="container3">
+
+                    <button type="button" class="btnmenu collapsible" style="background: rgb(255, 255, 255, 0.8); width: 92%; "><p style="font-size: 0.9rem;">Bring Player</p></button>
+                    <div class="content" style="height: 120px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <select id="playeroption1">
+                        </select>
+                        <div>
+                            <button class="submitbtn" onclick="bringplayer()">Bring</button>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btnmenu collapsible" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Teleport to player</p></button>
+                    <div class="content" style="height: 120px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <select id="playeroption2">
+                        </select>
+                        <div>
+                            <button class="submitbtn" onclick="teleporttoplayer()">Teleport To Selected Player</button>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btnmenu collapsible" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Revive</p></button>
+                    <div class="content" style="height: 120px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <select id="playeroption3">
+                        </select>
+                        <div>
+                            <button class="submitbtn" onclick="reviveplayer()">Revive Player</button>
+                        </div>
+                    </div>
+                    <button class="btnmenu collapsible" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Heal Player</p></button>
+                    <div class="content" style="height: 120px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <select id="playeroption4">
+                        </select>
+                        <div>
+                            <button class="submitbtn" onclick="healplayer()">Heal Selected</button>
+                        </div>
+                    </div>
+                    <button class="btnmenu regular" onclick="fixcarpersonal()" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Fix Vehicle</p></button>
+                    <button class="btnmenu collapsible" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Search Players Inventory</p></button>
+                    <div class="content" style="height: 120px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <select id="playeroption5">
+                        </select>
+                        <div>
+                            <button class="submitbtn" onclick="searchplayer()">Search Selected Inventory</button>
+                        </div>
+                    </div>
+                    <button class="btnmenu regular" onclick="maxstats()" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Max Stats</p></button>
+                    <button class="btnmenu regular" onclick="tptomarker()" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Teleport To Marker</p></button>
+                    <!-- <div class="content" style="height: 60px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <div>
+                            <button class="submitbtn" onclick="tptomarker()">TP Marker</button>
+                        </div>
+                    </div> -->
+                    <button class="btnmenu spawnveh_col" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Spawn Vehicle</p></button>
+                    <div class="vehcont" style="height: 110px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Spawn Vehicle:</p>
+                        <div>
+                        </div>
+                    </div>
+                    <button class="btnmenu spawnitem_col" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Spawn Item</p></button>
+                    <div class="itemcont" style="height: 140px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Spawn Item:</p>
+                    </div>
+                    <button class="btnmenu collapsible" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Copy Coords</p></button>
+                    <div class="content" style="height: 60px;">
+                        <p style="font-size: 17px; color: white; position: relative; top: -15px;">Copy Coords To Clipboard.</p>
+                        <div>
+                            <button class="submitbtn" onclick="currentcoords()">Copy Coordinates</button>
+                        </div>
+                    </div>
+                    <button class="btnmenu model_change" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Change Model</p></button>
+                    <div class="modelcont" style="height: 90px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <div>
+                            <!-- <button class="submitbtn" onclick="healcheckbox()">Submit</button> -->
+                        </div>
+                    </div>
+                    <button class="btnmenu regular" onclick="Clothingmenuplayer()" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Clothing Menu</p></button>
+                    <button class="btnmenu regular" onclick="barbermenu()" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Barber Menu</p></button>
+                    <button class="btnmenu spawn_money" style="background: rgb(255, 255, 255, 0.8); width: 92%;"><p style="font-size: 0.9rem;">Spawn Money</p></button>
+                    <div class="spawnmoneycont" style="height: 110px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <!-- <div>
+                            <button class="submitbtn" onclick="RemoveStress()">Submit</button>
+                        </div> -->
+                    </div>
+                    <button class="btnmenu garagestate_col" style="background: rgb(255, 255, 255, 0.5); width: 92%;"><p style="font-size: 0.9rem;">Vehicle Garage State</p></button>
+                    <div class="garagecont" style="height: 100px;">
+                        <p style="font-size: 12px; color: white; position: relative; top: -10px;">Target (Not Required):</p>
+                        <div>
+                            <!-- <button class="submitbtn" onclick="setgaragestatemenu()">Submit</button> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="stage-two">
+        </div>
+
+        <div class="stage-admin">
+            
+        </div>
+
+        <div class="stage-user">
+        </div>
+    </div>
+
+    <!-- Change Model Collapsable Menu -->
+
+    <script>
+        var coll = document.getElementsByClassName("model_change");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+                setModelMenu()
+                content.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+     <!-- Spawn Money Collapsable Menu -->
+
+     <script>
+        var coll = document.getElementsByClassName("spawn_money");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+                setCoordMenu()
+                content.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+    <!-- Garage State Collapsable Menu -->
+
+    <script>
+        var coll = document.getElementsByClassName("garagestate_col");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+                setgaragestatemenu()
+                content.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+    <!-- Spawn Item Collapsable Menu -->
+
+    <script>
+        var coll = document.getElementsByClassName("spawnitem_col");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+                spawnitemmenu()
+                content.style.display = "block";
+            }
+          });
+        }
+    </script>
+
+    <!-- Spawn Vehicle Collapsable Menu -->
+
+    <script>
+        var coll = document.getElementsByClassName("spawnveh_col");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                spawncarmenu()
+                content.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+    <!-- Regular Collapsable Menu -->
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+      <!-- No Collapsable Menu -->
+
+      <script>
+        var coll = document.getElementsByClassName("regular");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            content.style.display = "none";
+        });
+        }
+    </script>
+</body>
+</html>
